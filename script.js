@@ -24,14 +24,14 @@ let app = () => {
         sound.addEventListener('click', function() {
             song.src = this.getAttribute('data-sound');
             video.src = this.getAttribute('data-video');
-            song.loop = true;
+            video.loop = true;
             checkPlaying(song);
         });
     });
     //playing
     play.addEventListener('click', () => {
         checkPlaying(song);
-        // this.sounds.classList.add('bgChange');
+        sounds.classList.add('bgChange'); //my extra addition
     });
     //Select sound
     timeSelect.forEach(option => {
@@ -52,7 +52,7 @@ let app = () => {
             song.pause();
             video.pause();
             play.src = './svg/play.svg';
-            // this.sounds.classList.add('bgChange');
+            sounds.classList.add('bgChange');
             
         }
     }
